@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "0e161d33-a669-427c-b4e2-24ad4cebc992",
+		"name": "Assignment 9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25140979"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\":\"Sayed\",\n    \"email\":\"Sayed@gmail.com\",\n    \"password\":\"Fs11223344#\",\n    \"cPassword\":\"Fs11223344#\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"seifmahmoud@gmail.com\",\n    \"password\":\"Fs11223344#\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log Out",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDM4NDAyMzgxODJkODhhMjJiZmYzMiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3ODYyODUxNywiZXhwIjoxNjc5NDkyNTE3fQ.ipNzd5zvkeAMg4A1qBTIYY1yAln2KA8_Fp37bSO5dVk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/user/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDMzZDNlMzk0YzlkOTFmMTc4YmY3MCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3Nzk0NjIxMSwiZXhwIjoxNjc4ODEwMjExfQ.nGMoneHiOXFX9teqpEd3_kab8ad_nI88BxGW1zzYmuw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "http://localhost:5001/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDMzZDNlMzk0YzlkOTFmMTc4YmY3MCIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3Nzk0NjIxMSwiZXhwIjoxNjc4ODEwMjExfQ.nGMoneHiOXFX9teqpEd3_kab8ad_nI88BxGW1zzYmuw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "soft delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDM3N2JjZGNhNGQzNzIyYWE1NzcyMyIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3Nzk1MjY0MCwiZXhwIjoxNjc4ODE2NjQwfQ.O5HfPDlyFEK8_Ga5zKMGhSa4uquqDl-LUhnRfUWk1t4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/user/softDelete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"softDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MDM4NDAyMzgxODJkODhhMjJiZmYzMiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3Nzk1MjAxMywiZXhwIjoxNjc4ODE2MDEzfQ.qnZhyB_rtEFUGQPa60i3E5DNAHS4OkXSzjquZy__YD4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/user/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "add book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookName\":\"Fundamental Of Design Patterns \",\n    \"bookType\":\"Technology\",\n    \"author\":\"Gang of four\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/book/addBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"addBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/book/getAllBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"getAllBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "issue book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGQyNzM4NDE0M2VlOWVmNThiY2ZiNSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3ODU4MzYyNywiZXhwIjoxNjc5NDQ3NjI3fQ.pslFcX-s93Nub_2Wvf-rBB_4Gmdp1tuAaeiD7tiCroI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookName\":\"Fundamental Of C#\",\n    \"returnDate\":\"2023-3-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/book/issueBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"issueBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get My issued Books",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGQyNzM4NDE0M2VlOWVmNThiY2ZiNSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3ODU4MzYyNywiZXhwIjoxNjc5NDQ3NjI3fQ.pslFcX-s93Nub_2Wvf-rBB_4Gmdp1tuAaeiD7tiCroI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/book/issued/getMyBooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"issued",
+								"getMyBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search from My issued Books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGQyNzM4NDE0M2VlOWVmNThiY2ZiNSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3ODU4MzYyNywiZXhwIjoxNjc5NDQ3NjI3fQ.pslFcX-s93Nub_2Wvf-rBB_4Gmdp1tuAaeiD7tiCroI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookName\":\"Database\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/book/issued/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"issued",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "return book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "ATHAD__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MGQyNzM4NDE0M2VlOWVmNThiY2ZiNSIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3ODU5NDQ4MCwiZXhwIjoxNjc5NDU4NDgwfQ.TXAn0wjoHGHR2FoB08vCC-LJkakeBGQdfaiBWQW3GI8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookName\":\"Fundamental Of Database\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/book/returnBook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"returnBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get not returned books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/book/notReturned",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"notReturned"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search in not returned books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookName\":\"C#\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/book/notReturned/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"book",
+								"notReturned",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
